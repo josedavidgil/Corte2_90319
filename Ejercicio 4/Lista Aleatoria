@@ -1,0 +1,27 @@
+from random import randint as rd
+def mayor(lista):
+  may=lista[0]
+  for i in range(1,len(lista)):
+    if lista[i]>may:
+      may=lista[i]
+  return may
+def primos(lista):
+    primos = []
+    for n in lista:
+        if n > 1:
+            primo = True
+            for i in range(2, n):
+                if n % i == 0:
+                    primo = False
+                    break
+            if primo==True:
+                primos.append(n)
+    print("Los números primos de la lista son: ", primos)
+
+lista=[]
+for i in range (0,10):
+  lista.append(rd(1,50))
+print("La lista es: ",lista)
+primos(lista)
+print("El número mayor es: ")
+mayor(lista)
