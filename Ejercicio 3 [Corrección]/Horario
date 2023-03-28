@@ -1,0 +1,10 @@
+horario={
+    'Estática':'Martes y Jueves||Hora: 9 a 11 AM||Docente: Elmer Cepeda||Salón: 306 DB',
+    'Programación orientada a sistemas mecatrónicos':'Martes y Jueves||Hora: 1 a 3 PM||Docente: David Torres||Salón: 305 GO',
+    'Electricidad y magnetismo':'Martes y Jueves||Hora: 3 a 5 PM||Docente: Paula Dorado||Salón: 206 PS',
+    'Cálculo multivariado':'Miércoles y Viernes||Hora: 1 a 3 PM||Docente: Lina Peña||Salón: 406 DB',
+    'Circuitos AC':'Miércoles y Viernes||Hora: 3 a 5 PM||Docente: Roberto Bohorquez||Salón: 305 PS',
+    'Fundamentos de investigación':'Viernes||Hora: 11 a 1 PM||Docente: Julián Cortéz||Salón: 305 DB'
+}
+opc=input("Ingrese la materia: ")
+print(horario[opc])
