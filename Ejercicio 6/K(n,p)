@@ -1,0 +1,6 @@
+def K(n, p):
+    if n == 1:
+        return p
+    else:
+        return n*p + K(n-1, p)
+print(K(5,2))
