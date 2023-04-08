@@ -1,0 +1,20 @@
+class IMC():
+    def __init__(self, nombre, estatura, peso):
+        self.nombre = nombre
+        self.estatura = estatura
+        self.peso = peso
+
+    def calcularimc(self):
+        imc = self.peso / (self.estatura ** 2)
+        print(f"El IMC de {self.nombre} es {imc:.2f}")    #Se pone 2f para especificar cantidad de decimales
+
+#Introducción de los nombres, estaturas y pesos
+persona1 = IMC("Pedro Caceres", 1.88, 97)
+persona2 = IMC("Maria Perez", 1.60, 47)
+persona3 = IMC("Julian Dominguez", 1.58, 58)
+persona4 = IMC("Jessica Fuentes", 1.70, 73)
+#Se llama la función para calcular el imc
+persona1.calcularimc()
+persona2.calcularimc()
+persona3.calcularimc()
+persona4.calcularimc()
