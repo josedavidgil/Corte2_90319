@@ -1,0 +1,21 @@
+with open('alimentos.txt', 'r') as lista:
+    prod = {} #Creación de diciconario vacio
+    for line in lista:
+        if len(line.strip().split(',')) >= 3: #Elaboración del diccionario
+            cod, product, valor = line.strip().split(',')[-3:] #Elaboración del diccionario organizándolo
+            prod[cod] = (product, valor)
+    print(prod) #Se imprime para poder validar que esté reconociendo los productos
+
+#Ingreso de los valores
+while True:
+    itemc = input("Ingresar código del ítem: ")
+    if itemc.lower() == 'salir':
+        break
+    valor = float(input("Ingrese el valor neto del producto: "))
+
+    iva = float(prod[itemc][1])
+    v_bruto = valor * (1 + iva)
+
+    print("El valor del IVA es:",iva)
+    print("El valor base del producto es:",v_bruto)
+

@@ -1,0 +1,92 @@
+import random
+import random as rd
+class Ciudadano():
+    def __init__(self,nombre:str,edad:int,cedula:int):
+        self.__nombre=nombre
+        self.__edad=edad
+        self.__cedula=cedula
+    #Getters
+    def getNombre(self):
+        return self.__nombre
+    def getEdad(self):
+        return self.__edad
+    def getCedula(self):
+        return self.__cedula
+    #Setters
+    def setNombre(self,nombre:str):
+        self.__nombre=nombre
+    def setEdad(self,edad:int):
+        self.__edad=edad
+    def setCedulta(self,cedula:int):
+        self.__cedula=cedula
+    def nivelp(self):
+        print("Usted tiene nivel Profesional. ")
+class Ingeniero(Ciudadano):
+    def __init__(self,nombre:str,edad:int,cedula:int,ingenieria:str,COPNIAID:int):
+        super().__init__(nombre,edad,cedula)
+        self.__ingenieria=ingenieria
+        self.__COPNIAID=COPNIAID
+    #Getters
+    def getIngenieria(self):
+        return self.__ingenieria
+    def getCOPNIAID(self):
+        return self.__COPNIAID
+    #Setters
+    def setIngenieria(self,ingenieria):
+        self.__ingenieria=ingenieria
+    def setCOPNIAID(self,COPNIAID):
+        self.__COPNIAID=COPNIAID
+    def nivelp(self):
+        print(f"Usted es Ingeniero(a){self.__ingenieria}")
+    def trabajar(self):
+        listing=['Ha establecido un modelo de ingeniería para la construcción de un robot de construcción.','Ha realizado la inspección de el estado de una máquina eléctrica','Esta ejerciendo su labor como ingeniero(a) en una fábrica cercana.','Ha propuesto el diseño de un artefacto para limpieza en una empresa.']
+        print(random.choice(listing))
+class Medico(Ciudadano):
+    def __init__(self,nombre:str,edad:int,cedula:int,especialidad:str,casos_atendidos:int):
+        super().__init__(nombre,edad,cedula)
+        self.__especialidad=especialidad
+        self.__casos_atendidos=casos_atendidos
+    #Getters
+    def getEspecialidad(self):
+        return self.__especialidad
+    def getCasos_atendidos(self):
+        return self.__casos_atendidos
+    #Setters
+    def setEspecialidad(self,especialidad):
+        self.__especialidad=especialidad
+    def setCasos_atendidos(self,casos_atendidos):
+        self.__casos_atendidos=casos_atendidos
+    def nivelp(self):
+        print(f"Su labor en la medicina es {especialidad}")
+    def trabajar(self):
+        listmed=['Ha atendido un caso que le ha otorgado un nuevo rol en el hospital.','Ha desempeñado correctamente su labor en horario adicional.','Recibió un llamado por urgencias que atendió correctamente.']
+        print(random.choice(listmed))
+class Policia(Ciudadano):
+    def __init__(self,nombre:str,edad:int,cedula:int,arrestos:int,rango:str):
+        super().__init__(nombre,edad,cedula)
+        self.__arrestos=arrestos
+        self.__rango=rango
+    #Getters
+    def getArrestos(self):
+        return self.__arrestos
+    def getRango(self):
+        return self.__rango
+    #Setters
+    def setArrestos(self,arrestos:int):
+        self.__arrestos=arrestos
+    def setRango(self,rango:str):
+        self.__rango=rango
+    def nivelp(self):
+        print(f"Usted actualmente desempeña su labor como {rango} en la policía.")
+    def trabajar (self):
+        listpol=['Ha atendido un robo cerca de un barrio peligroso.','Satisfactoriamente ha realizado el arresto de 2 sospechosos.','Ha evitado un secuestro de un ciudadano.']
+        print(random.choice(listpol))
+def main():
+    Ingeniero1=Ingeniero('Juan Carlos Lopez',38,19283621,'Mecatrónica',12410289391)
+    print(f'Ingeniero(a): {Ingeniero1.getNombre()} de {Ingeniero1.getEdad()} años identificado con C.C {Ingeniero1.getCedula()} ejecutando su labor en la ingeniería {Ingeniero1.getIngenieria()} con ID del COPNIA {Ingeniero1.getCOPNIAID()}.')
+    Medica=Medico('Ana Gabriela Guzman',27,102018203,'Enfermera',15)
+    print(f'Medico(a): {Medica.getNombre()} de {Medica.getEdad()} años identificado con C.C {Medica.getCedula()} ejecutando su labor en la medicina como {Medica.getEspecialidad()} con un total de {Medica.getCasos_atendidos()} casos atendidos.')
+    Policia1=Policia('Henry Armando Sanabria Cely',51,12039712,427,'General')
+    print(f'Policia: {Policia1.getNombre()} de {Policia1.getEdad()} años identificado con C.C {Policia1.getCedula()} ejecutando su labor como {Policia1.getRango()} en la Policía Nacional de Colombia con un total de {Policia1.getArrestos()} arrestos.')
+main()
+

@@ -1,0 +1,23 @@
+l_dia=['Lunes','Martes','Miercoles','Jueves','Viernes']
+l_hora=['9am-11am','11am-13pm','13pm-15pm','15pm-17pm']
+l_salon=['306 DB','305 GO','206 PS','406 DB','305 PS','305 DB']
+l_prof=['Elmer Cepeda','David Torres','Paula Dorado','Lina Peña','Roberto Bohorquez','Julian Cortés']
+l_mat=['Estática','Programación aplicada a sistemas mecatrónicos','Electricidad y magnetismo','Cálculo multivariado','Circuitos AC','Fundamentos de investigación']
+opc=input("Ingrese el nombre de la materia (Estática,Programación aplicada a sistemas mecatrónicos,Electricidad y magnetismo,Cálculo multivariado,Circuitos AC,Fundamentos de investigación): ")
+j=0
+for i in l_mat:
+  if opc==i:
+    print(l_dia[j],l_hora[j],l_salon[j],l_prof[j])
+  elif opc==i:
+    print(l_dia[j],l_hora[j],l_salon[j],l_prof[j])
+  elif opc==i:
+    print(l_dia[j],l_hora[j],l_salon[j],l_prof[j])
+  elif opc==i:
+    print(l_dia[j],l_hora[j],l_salon[j],l_prof[j])
+  elif opc==i:
+    print(l_dia[j],l_hora[j],l_salon[j],l_prof[j])
+  elif opc==i:
+    print(l_dia[j],l_hora[j],l_salon[j],l_prof[j])
+  elif opc==i:
+    print(l_dia[j],l_hora[j],l_salon[j],l_prof[j])
+  j+=1

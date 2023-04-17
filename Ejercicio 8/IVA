@@ -1,0 +1,29 @@
+# Leer archivo y crear diccionario de productos y sus IVA correspondientes
+productos = {}
+with open("Alimentos.txt", "r") as f:
+    for line in f:
+        codigo, producto, iva = line.strip().split(",")
+        productos[producto.lower()] = float(iva)
+
+# Loop principal del programa
+while True:
+    # Pedir al usuario el producto y su valor neto
+    prod = input("Ingrese el nombre del producto (o escriba 'salir' para terminar): ").lower()
+    if prod == "salir":
+        break
+    neto = float(input("Ingrese el valor neto del producto: "))
+
+    # Obtener el IVA correspondiente al producto ingresado
+    if prod in productos:
+        iva = productos[prod]
+    else:
+        print("Producto no encontrado en el archivo.")
+        continue
+
+    # Calcular valor base y valor del IVA
+    base = neto / (1 + iva)
+    valor_iva = neto - base
+
+    # Imprimir resultados
+    print(f"Valor base del producto: {base:.2f}")
+    print(f"Valor del IVA: {valor_iva:.2f}")

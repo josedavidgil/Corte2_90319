@@ -1,0 +1,22 @@
+import random as rd
+matriz = []
+for i in range (5):
+    matriz.append([])
+    for j in range (10):
+        num=rd.randint(1,100)
+        matriz[i].append(num)
+print('Matriz:\n',matriz)
+max=0
+matriz_or=[]
+for k in matriz:
+    f=k
+    k.sort()
+    matriz_or.append(k)
+    for l in k:
+        if max<l:
+            max=l
+            fila=i
+            columna=j
+print('Número mayor en la matriz:\n',max,'en la posición (',i,',',j,')')
+
+print('Matriz ordenada:\n',matriz_or)
